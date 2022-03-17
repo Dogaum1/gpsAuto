@@ -1,0 +1,826 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="background">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>801</width>
+      <height>601</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: #CA6702;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QStackedWidget" name="stackedWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>100</y>
+      <width>781</width>
+      <height>491</height>
+     </rect>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Plain</enum>
+    </property>
+    <property name="currentIndex">
+     <number>2</number>
+    </property>
+    <widget class="QWidget" name="page1">
+     <widget class="QPushButton" name="startButton">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>180</y>
+        <width>281</width>
+        <height>101</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Franklin Gothic Demi</family>
+        <pointsize>30</pointsize>
+       </font>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: 1px solid white;
+border-radius: 15px;
+color:white;
+background: #005F73;</string>
+      </property>
+      <property name="text">
+       <string>INICIAR</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page2">
+     <widget class="QLabel" name="subBackground">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>80</y>
+        <width>701</width>
+        <height>311</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background:#EE9B00;
+border: 3px solid #001219;
+border-radius: 5px;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="subBackgroundShadow">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>90</y>
+        <width>701</width>
+        <height>311</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background:#001219;
+border-radius: 5px;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="nitLabel">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>127</y>
+        <width>131</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Leelawadee UI Semilight</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="mouseTracking">
+       <bool>false</bool>
+      </property>
+      <property name="tabletTracking">
+       <bool>false</bool>
+      </property>
+      <property name="toolTipDuration">
+       <number>-7</number>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: #001219;
+background:#EE9B00;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="text">
+       <string>NIT/PIS/PASEP</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="nitInput">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>143</y>
+        <width>310</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: 2px solid #001219;
+background: rgba(0,0,0,0);</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="categoryLabel">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>180</y>
+        <width>111</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Leelawadee UI Semilight</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="toolTipDuration">
+       <number>-7</number>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: #001219;
+background:#EE9B00;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="text">
+       <string>CATEGORIA</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="categoryInput">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>196</y>
+        <width>310</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: 2px solid #001219;
+background:#EE9B00;</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="paymentCodeInput">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>256</y>
+        <width>630</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: 2px solid #001219;
+background: rgba(0,0,0,0);
+background:#EE9B00;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="paymentCodeLabel">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>240</y>
+        <width>81</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Leelawadee UI Semilight</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="toolTipDuration">
+       <number>-7</number>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: #001219;
+background:#EE9B00;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="text">
+       <string>CÓDIGO</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="captchaInput">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>316</y>
+        <width>310</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: 2px solid #001219;
+background: rgba(0,0,0,0);</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="captchaLabel">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>300</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Leelawadee UI Semilight</family>
+        <pointsize>14</pointsize>
+        <stylestrategy>PreferDefault</stylestrategy>
+       </font>
+      </property>
+      <property name="toolTipDuration">
+       <number>-7</number>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: #001219;
+background:#EE9B00;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="text">
+       <string>CAPTCHA</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="continueButton">
+      <property name="geometry">
+       <rect>
+        <x>610</x>
+        <y>420</y>
+        <width>151</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Franklin Gothic Demi</family>
+        <pointsize>17</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: 3px solid white;
+border-radius: 20px;
+color:white;</string>
+      </property>
+      <property name="text">
+       <string>CONTINUAR</string>
+      </property>
+     </widget>
+     <zorder>subBackgroundShadow</zorder>
+     <zorder>subBackground</zorder>
+     <zorder>nitInput</zorder>
+     <zorder>nitLabel</zorder>
+     <zorder>categoryInput</zorder>
+     <zorder>categoryLabel</zorder>
+     <zorder>paymentCodeInput</zorder>
+     <zorder>paymentCodeLabel</zorder>
+     <zorder>captchaInput</zorder>
+     <zorder>captchaLabel</zorder>
+     <zorder>continueButton</zorder>
+    </widget>
+    <widget class="QWidget" name="page3">
+     <widget class="QLabel" name="subBackground2">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>80</y>
+        <width>701</width>
+        <height>311</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background:#EE9B00;
+border: 3px solid #001219;
+border-radius: 5px;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="subBackground_2">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>90</y>
+        <width>701</width>
+        <height>311</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background:#001219;
+border-radius: 5px;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="yearLabel">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>129</y>
+        <width>51</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Leelawadee UI Semilight</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="mouseTracking">
+       <bool>false</bool>
+      </property>
+      <property name="tabletTracking">
+       <bool>false</bool>
+      </property>
+      <property name="toolTipDuration">
+       <number>-7</number>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: #001219;
+background:#EE9B00;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="text">
+       <string>ANO</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="yearInput">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>145</y>
+        <width>310</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: 2px solid #001219;
+background: rgba(0,0,0,0);</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="salaryLabel">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>184</y>
+        <width>81</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Leelawadee UI Semilight</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="mouseTracking">
+       <bool>false</bool>
+      </property>
+      <property name="tabletTracking">
+       <bool>false</bool>
+      </property>
+      <property name="toolTipDuration">
+       <number>-7</number>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: #001219;
+background:#EE9B00;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="text">
+       <string>SALARIO</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="salaryInput">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>200</y>
+        <width>311</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: 2px solid #001219;
+background: rgba(0,0,0,0);</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="specificInput">
+      <property name="geometry">
+       <rect>
+        <x>530</x>
+        <y>270</y>
+        <width>131</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Microsoft YaHei Light</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QRadioButton::unchecked {
+	background:#EE9B00;
+	color: black;
+	border: 1px solid #001219;
+	border-radius: 10px;
+}
+
+QRadioButton {
+	background:#001219;
+	color:white;
+	border: 1px solid white;
+	border-radius: 10px;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>   ESPECIFICO</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="allYearInput">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>270</y>
+        <width>131</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Microsoft YaHei Light</family>
+        <pointsize>12</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QRadioButton {
+	background:#001219;
+	color:white;
+	border: 1px solid white;
+	border-radius: 10px;
+}
+
+QRadioButton::unchecked {
+	background:#EE9B00;
+	color: black;
+	border: 1px solid #001219;
+	border-radius: 10px;
+}
+
+</string>
+      </property>
+      <property name="text">
+       <string>    COMPLETO</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="exceptInput">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>270</y>
+        <width>131</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Microsoft YaHei UI Light</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QRadioButton::unchecked {
+	background:#EE9B00;
+	color: black;
+	border: 1px solid #001219;
+	border-radius: 10px;
+}
+
+QRadioButton {
+	background:#001219;
+	color:white;
+	border: 1px solid white;
+	border-radius: 10px;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>      EXCETO</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="intervalInput">
+      <property name="geometry">
+       <rect>
+        <x>390</x>
+        <y>270</y>
+        <width>131</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Microsoft YaHei Light</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QRadioButton::unchecked {
+	background:#EE9B00;
+	color: black;
+	border: 1px solid #001219;
+	border-radius: 10px;
+}
+
+QRadioButton {
+	background:#001219;
+	color:white;
+	border: 1px solid white;
+	border-radius: 10px;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>   INTERVALO</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="monthBorder">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>260</y>
+        <width>591</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: 2px solid #001219;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="monthsLabel2">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>239</y>
+        <width>221</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Leelawadee UI Semilight</family>
+        <pointsize>13</pointsize>
+       </font>
+      </property>
+      <property name="mouseTracking">
+       <bool>false</bool>
+      </property>
+      <property name="tabletTracking">
+       <bool>false</bool>
+      </property>
+      <property name="toolTipDuration">
+       <number>-7</number>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: #001219;
+background:#EE9B00;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="text">
+       <string>ESPECIFICAÇÃO DOS MESES</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="continueButton2">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>420</y>
+        <width>151</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Franklin Gothic Demi</family>
+        <pointsize>17</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: 3px solid white;
+border-radius: 20px;
+color:white;</string>
+      </property>
+      <property name="text">
+       <string>CONTINUAR</string>
+      </property>
+     </widget>
+     <zorder>subBackground_2</zorder>
+     <zorder>subBackground2</zorder>
+     <zorder>yearInput</zorder>
+     <zorder>yearLabel</zorder>
+     <zorder>salaryInput</zorder>
+     <zorder>salaryLabel</zorder>
+     <zorder>monthBorder</zorder>
+     <zorder>allYearInput</zorder>
+     <zorder>exceptInput</zorder>
+     <zorder>intervalInput</zorder>
+     <zorder>specificInput</zorder>
+     <zorder>monthsLabel2</zorder>
+     <zorder>continueButton2</zorder>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="titleBackground">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>761</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>40</pointsize>
+     </font>
+    </property>
+    <property name="toolTipDuration">
+     <number>-7</number>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: #F75821;
+background: white;
+border-radius:20px;</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="titleLabel">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>761</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Franklin Gothic Demi</family>
+      <pointsize>42</pointsize>
+     </font>
+    </property>
+    <property name="toolTipDuration">
+     <number>-7</number>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: #CA6702;</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="text">
+     <string>G.P.S.</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
