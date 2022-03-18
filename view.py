@@ -1,4 +1,4 @@
-from PyQt5 import QtWidgets, uic
+from PyQt5 import QtWidgets, uic, QtGui
 from core import Core
 import os
 
@@ -27,7 +27,6 @@ class Interface(QtWidgets.QMainWindow):
         self.categoryInput.addItem('DOMESTICO', ['1600 - EMPREGADO DOMESTICO MENSAL - NIT /PIS/PASEP'])
         self.categoryInput.addItem('FACULTATIVO', ['1406 - FACULTATIVO MENSAL - NIT/PIS/PASEP', '1473 - FACULTATIVO - OPÇÃO 11% (ART. 80 DA LC 123/2006) RECOLHIMENTO MENSAL - NIT/PIS/PASEP', '1929 - FACULTATIVO BAIXA RENDA - RECOLHIMENTO MENSAL - NIT/PIS/PASEP'])
         self.categoryInput.addItem('SEGURADO ESPECIAL', ['1503 - SEGURADO ESPECIAL MENSAL - NIT/PIS/PASEP'])
-
         self.categoryInput.currentIndexChanged.connect(self.updatePaymentValueCombo)
         self.updatePaymentValueCombo(self.categoryInput.currentIndex())
 
@@ -36,15 +35,25 @@ class Interface(QtWidgets.QMainWindow):
         self.continueButton.clicked.connect(self.phaseOne)
         self.continueButton2.clicked.connect(self.phaseTwo)
         self.gerateButton.clicked.connect(self.phaseTwoAlt)
+        self.reloadCaptchaButton.clicked.connect(self.reloadCaptchaImage)
 
     def startCore(self):
         self.changeScreen(1)
         self.core.start()
+        self.insertCaptchaImage()
 
     def phaseOne(self):
         self.changeScreen(2)
         category = ['AUTONOMO','DOMESTICO', 'FACULTATIVO', 'SEGURADO_ESPECIAL']
         self.core.phaseOne(category[self.categoryInput.currentIndex()], self.nitInput.text(), self.captchaInput.text())
+
+    def insertCaptchaImage(self):
+        pixmap = QtGui.QPixmap(f"{os.getcwd()}/captcha_challenge.png")
+        self.captchaImageLabel.setPixmap(pixmap)
+
+    def reloadCaptchaImage(self):
+        self.core.reloadCaptchaImage()
+        self.insertCaptchaImage()
 
     def phaseTwo(self):
         if self.allYearInput.isChecked():

@@ -9,6 +9,8 @@ class Sal:
         self.captchaInputId     = "captcha_campo_resposta"
         self.firstConfirmButtonId       = "opcoesCalcContribuicoesCI:botaoConfirmar"
         self.secondComfirmButtonName    = "formDadosCadastraisCalcContribuicoesCI:j_id38"
+        self.captchaImageId = "captcha_challenge"
+        self.reloadCaptchaButtonId = "captcha_bt_reload"
         
         # phase two elements
         self.paymentCodeInputId = "informarSalariosContribuicaoDomestico:selCodigoPagamento"

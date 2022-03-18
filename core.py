@@ -24,6 +24,7 @@ class Core:
             self.driver = webdriver.Chrome(ChromeDriverManager().install(), chrome_options=self.setup())
 
         self.driver.get(self.sal.address)
+        self.saveCaptchaImage()
 
     def setup(self):
         # configuration to print on PDF24
@@ -40,6 +41,9 @@ class Core:
         prefs = {'printing.print_preview_sticky_settings.appState': json.dumps(settings)}
         chrome_options.add_experimental_option('prefs', prefs)
         chrome_options.add_argument('--kiosk-printing')
+
+        # hidden google chrome
+        # chrome_options.headless = True
 
         return chrome_options
 
@@ -61,6 +65,16 @@ class Core:
         # click confirm button
         self.driver.find_element(By.ID, self.sal.firstConfirmButtonId).click()
         self.driver.find_element(By.NAME, self.sal.secondComfirmButtonName).click()
+
+    # a phase one complement
+    def saveCaptchaImage(self):
+        with open('captcha_challenge.png','wb') as file:
+            file.write(self.driver.find_element(By.ID, self.sal.captchaImageId).screenshot_as_png)
+
+    def reloadCaptchaImage(self):
+        self.driver.find_element(By.ID, self.sal.reloadCaptchaButtonId).click()
+        time.sleep(0.3)
+        self.saveCaptchaImage()
 
     def phaseTwo(self, year, salary, paymentCodeValue, mode, checked=None):
         paymentCodeSelect = Select(self.driver.find_element(By.ID, self.sal.paymentCodeInputId))
@@ -136,7 +150,7 @@ class Core:
         for s in sequence:
             self.generatePdf(s-1, sequence)
     
-    # a phase Three complement
+    # a phase three complement
     def generatePdf(self, month, sequence):
         valueSequence = []
         p = self.driver.current_window_handle
